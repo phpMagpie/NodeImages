@@ -1,0 +1,14 @@
+{
+	"name": "NoteImages",
+	"description": "Allows you to attach images to nodes. This plugin requires ELFinder",
+
+	"author": "Liam Keily",
+	"authorEmail": "liam@simplywebsites.com",
+	"authorUrl": "http://www.liamkeily.com",
+
+	"dependencies": {
+		"plugins": [
+		"ElFinder"
+		]
+	}
+}
