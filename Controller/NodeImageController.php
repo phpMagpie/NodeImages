@@ -23,7 +23,7 @@ class NodeImageController extends NodeImagesAppController {
             $this->loadModel('NodeImage');
         }
 
-	public function admin_add($title,$url){
+	public function admin_add(){
 		$title = $this->request->query['title'];
 		$url = $this->request->query['url'];
 		
