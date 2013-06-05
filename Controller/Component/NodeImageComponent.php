@@ -28,8 +28,6 @@ class NodeImageComponent extends Component {
 					}
 				}
 				
-				print_R($controller->Security->unlockedFields);
-			
 			}
 		}
 		
