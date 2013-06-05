@@ -25,12 +25,7 @@ class NodeImagesActivation {
  * @return void
  */
   public function onActivation(&$controller) {
-    $controller->Croogo->addAco('NodeImage'); 
-    $controller->Croogo->addAco('NodeImage/admin_index'); 
-    $controller->Croogo->addAco('NodeImage/admin_add'); 
-    $controller->Croogo->addAco('NodeImage/admin_remove'); 
-    $controller->Croogo->addAco('NodeImage/admin_moveup'); 
-    $controller->Croogo->addAco('NodeImage/admin_movedown'); 
+    $controller->Croogo->addAco('NodeImages'); 
     
     $this->_schema('create');
   }
@@ -52,7 +47,7 @@ class NodeImagesActivation {
  * @return void
  */
   public function onDeactivation(&$controller) {
-    $controller->Croogo->removeAco('NodeImage');
+    $controller->Croogo->removeAco('NodeImages');
     $this->_schema('drop');
 }
 		

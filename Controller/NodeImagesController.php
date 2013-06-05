@@ -1,10 +1,10 @@
 <?php
 
-App::uses('NodeImageAppController', 'NodeImages.Controller');
+App::uses('NodeImagesAppController', 'NodeImages.Controller');
 App::uses('Croogo', 'Lib');
 
 /**
- * Support Controller
+ * NodeImages Controller
  *
  * PHP version 5
  *
@@ -15,33 +15,34 @@ App::uses('Croogo', 'Lib');
  * @link     http://www.liamkeily.com
  */
 
-class NodeImageController extends NodeImagesAppController {
+class NodeImagesController extends NodeImagesAppController {
+
+/**
+ * Controller name
+ *
+ * @var string
+ * @access public
+ */
+	public $name = 'NodeImages';
 
 	public $helpers = array('Html','Form');
-        
-        public function beforeFilter(){
-            $this->loadModel('NodeImage');
-        }
 
 	public function admin_add(){
 		$title = $this->request->query['title'];
 		$url = $this->request->query['url'];
-		
-            $this->set(compact('title','url'));
+    $this->set(compact('title','url'));
 	}
         
-        public function admin_remove($id){
-            if($this->NodeImage->delete($id)){
-                $success=true;
-            }
-            else
-            {
-                $success=false;
-            }
-            
-            $this->set('success',$success);
-            $this->layout = 'ajaxsuccess';
-        }
+  public function admin_remove($id){
+    if($this->NodeImage->delete($id)){
+      $success=true;
+    } else {
+      $success=false;
+    }
+    
+    $this->set('success',$success);
+    $this->layout = 'ajaxsuccess';
+  }
         
         public function admin_moveup($id){
             $att = $this->NodeImage->findById($id);

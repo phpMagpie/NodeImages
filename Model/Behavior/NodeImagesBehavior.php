@@ -1,7 +1,7 @@
 <?php
 App::uses('ModelBehavior', 'Model');
 
-class NodeImageBehavior extends ModelBehavior {
+class NodeImagesBehavior extends ModelBehavior {
 
 /**
  * Setup

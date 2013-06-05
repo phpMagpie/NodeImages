@@ -1,6 +1,6 @@
 {
-	"name": "NoteImages",
-	"description": "Allows you to attach images to nodes. This plugin requires ELFinder",
+	"name": "NodeImages",
+	"description": "Allows you to attach images to nodes. This plugin requires ElFinder or MoxieManager",
 
 	"author": "Liam Keily",
 	"authorEmail": "liam@simplywebsites.com",
@@ -8,7 +8,7 @@
 
 	"dependencies": {
 		"plugins": [
-		"ElFinder"
+		  "ElFinder"
 		]
 	}
 }

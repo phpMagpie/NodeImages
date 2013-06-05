@@ -1,7 +1,7 @@
 <?php
 
-Croogo::hookComponent('Nodes', array('NodeImages.NodeImage'=>array('priority' => 8)));
+Croogo::hookComponent('Nodes', array('NodeImages.NodeImages'=>array('priority' => 8)));
 
-Croogo::hookBehavior('Node', 'NodeImages.NodeImage', array());
+Croogo::hookBehavior('Node', 'NodeImages.NodeImages', array());
 
-Croogo::hookHelper('*', 'NodeImages.NodeImage');
+Croogo::hookHelper('*', 'NodeImages.NodeImages');

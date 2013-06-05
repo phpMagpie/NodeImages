@@ -3,21 +3,21 @@
 App::uses('Component', 'Controller');
 
 /**
- * Note Images Component
+ * NodeImages Component
  *
  * @author Liam Keily
  * @package Croogo.NodeImages.Controller.Component
  */
-class NodeImageComponent extends Component {
+class NodeImagesComponent extends Component {
 	
 	public function startup(Controller $controller){
 
 		if($controller->action == 'admin_edit' || $controller->action == 'admin_add'){
-			$controller->helpers[] = 'NodeImages.NodeImage';
+			$controller->helpers[] = 'NodeImages.NodeImages';
 			$controller->helpers[] = 'ElFinder.ElFinder';
 			
-			Croogo::hookAdminTab('Nodes/admin_add','Images','NodeImages.NodeImage');
-			Croogo::hookAdminTab('Nodes/admin_edit','Images','NodeImages.NodeImage');
+			Croogo::hookAdminTab('Nodes/admin_add','Images','NodeImages.NodeImages');
+			Croogo::hookAdminTab('Nodes/admin_edit','Images','NodeImages.NodeImages');
 			
 			
 			if (!empty($controller->request->data['NodeImage'])) {
