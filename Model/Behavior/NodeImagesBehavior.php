@@ -10,15 +10,21 @@ class NodeImagesBehavior extends ModelBehavior {
  * @param array $config
  * @return void
  */
-	public function setup(Model $model, $config = array()) {
-		
-            $model->hasMany['NodeImage'] = array(
-                'className' => 'NodeImages.NodeImage',
-                'foreignKey' => 'node_id',
-                'conditions' => array(),
-                'dependent' => true,
-		'order' => 'NodeImage.lft',
-            );
-	}
+  public function setup(Model $model, $config = array()) {
+    $model->hasMany['NodeImage'] = array(
+      'className' => 'NodeImages.NodeImage',
+      'foreignKey' => 'node_id',
+      'conditions' => array(),
+      'order' => 'NodeImage.lft',
+      'dependent' => true,
+    );
+  }
+  
+  public function beforeFind(Model $model, $queryData = array()) {
+    if(isset($queryData['contain']) && !in_array('NodeImage', $queryData['contain'])) {
+      $queryData['contain'][] = 'NodeImage';
+    }
+    return $queryData;
+  }
 
 }

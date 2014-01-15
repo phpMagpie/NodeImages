@@ -1,1 +1,1 @@
-{"success":"true"}
+{"success":"<?php echo $success;?>"}

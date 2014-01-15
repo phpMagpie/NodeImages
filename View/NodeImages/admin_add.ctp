@@ -1,3 +1,3 @@
 <?php
-$this->NodeImages->row($title,$url);
+$this->NodeImages->row($image);
 ?>

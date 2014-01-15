@@ -48,7 +48,7 @@ class NodeImagesActivation {
  */
   public function onDeactivation(&$controller) {
     $controller->Croogo->removeAco('NodeImages');
-    $this->_schema('drop');
+//    $this->_schema('drop');
 }
 		
 /**
